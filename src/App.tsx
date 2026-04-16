@@ -1,11 +1,19 @@
 import { useState } from 'react';
 import { Calculator } from './components/Calculator';
+import { History } from './components/History';
+
+type HistoryItem = { exp: string; res: string };
 
 export default function App() {
+  const [history, setHistory] = useState<HistoryItem[]>([]);
   const [isFocused, setIsFocused] = useState(true);
 
   const handleResult = (exp: string, res: string) => {
-    return console.log(`Expression: ${exp}, Result: ${res}`);
+    setHistory(prev => [{ exp, res }, ...prev].slice(0, 6));
+  };
+
+  const handleSelectHistory = (value: string) => {
+    console.log('Selected from history:', value);
   };
 
   return (
@@ -16,6 +24,7 @@ export default function App() {
           onResult={handleResult}
           onFocusChange={setIsFocused}
         />
+        <History items={history} onSelect={handleSelectHistory} />
       </div>
     </div>
   );
