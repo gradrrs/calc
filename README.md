@@ -2,10 +2,7 @@
 
 Проект является улучшенной версией классического учебного примера: переписан с чистого JavaScript на React, добавлена история и расширено визуальное оформление.
 
-![Версия](https://img.shields.io/badge/version-1.0.0-blue)
-![React](https://img.shields.io/badge/React-18.2.0-61dafb)
-![TypeScript](https://img.shields.io/badge/TypeScript-5.0-3178c6)
-![Tailwind](https://img.shields.io/badge/Tailwind-3.0-38bdf8)
+ДЕПЛОЙ https://calc-eight-livid.vercel.app/
 
 ---
 
@@ -15,6 +12,8 @@
 **[Живая демонстрация калькулятора]** *(вставьте ссылку на деплой)*
 
 ---
+
+
 
 ## 📋 Функционал
 
