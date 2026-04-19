@@ -1,73 +1,54 @@
-# React + TypeScript + Vite
+Современный веб-калькулятор, созданный на React и TypeScript. Поддерживает базовые арифметические операции, удобную историю последних действий и полное управление с клавиатуры.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Проект является улучшенной версией классического учебного примера: переписан с чистого JavaScript на React, добавлена история и расширено визуальное оформление.
 
-Currently, two official plugins are available:
+![Версия](https://img.shields.io/badge/version-1.0.0-blue)
+![React](https://img.shields.io/badge/React-18.2.0-61dafb)
+![TypeScript](https://img.shields.io/badge/TypeScript-5.0-3178c6)
+![Tailwind](https://img.shields.io/badge/Tailwind-3.0-38bdf8)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+---
 
-## React Compiler
+## 🚀 Демо
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Посмотреть работающее приложение можно по ссылке:  
+**[Живая демонстрация калькулятора]** *(вставьте ссылку на деплой)*
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## 📋 Функционал
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+| Категория | Возможности |
+| :--- | :--- |
+| **Основной** | Сложение (+), вычитание (-), умножение (×), деление (÷), смена знака (+/-) |
+| **Очистка** | Полная очистка (Clear) |
+| **История** | Сохраняет последние 6 вычислений с возможностью выбора результата |
+| **Клавиатура** | Полная поддержка: цифры, операторы, Enter (=), Backspace, Escape |
+| **UI/UX** | Анимация нажатия, эффект размытия (blur), градиентные границы, фокус с подсветкой |
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+---
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+## 🧱 Технологии
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+- **Frontend:** React 18, TypeScript
+- **Сборка:** Vite
+- **Стили:** Tailwind CSS
+- **Состояние:** React Hooks (useState, useEffect, useRef, useCallback)
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+ЗАПУСК ПРОЕКТА
+- 1. **Клонировать репозиторий**
+   ```bash
+   git clone https://github.com/your-username/calculator.git
+   cd calculator
+Установить зависимости
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+bash
+npm install
+# или
+yarn install
+Запустить в режиме разработки
+
+bash
+npm run dev
+# или
+yarn dev
